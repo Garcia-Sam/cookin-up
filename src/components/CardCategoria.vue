@@ -10,6 +10,9 @@ export default {
 </script>
 
 <template>
-    {{ categoria.nome }}
-    {{ categoria.imagem }}
+    <article class="categoria">
+        <header class="categoria__cabecalho">
+            <img src="" alt="" class="categoria__imagem">
+        </header>
+    </article>
 </template>
