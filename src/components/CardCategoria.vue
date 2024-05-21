@@ -6,7 +6,7 @@ import Tag from './Tag.vue';
 
 export default {
     components: { Tag, IngredienteSelecionavel },
-    emits: ['adicionarIngrediente'],
+    emits: ['adicionarIngrediente', 'removerIngrediente'],
     props: {
         categoria: { type: Object as PropType<ICategoria>, required: true }
     },
@@ -23,7 +23,7 @@ export default {
 
         <ul class="categoria__ingredientes">
             <li v-for="ingrediente in categoria.ingredientes" :key="ingrediente">
-                <IngredienteSelecionavel :ingrediente="ingrediente" @adicionar-ingrediente="$emit('adicionarIngrediente', $event)" />
+                <IngredienteSelecionavel :ingrediente="ingrediente" @adicionar-ingrediente="$emit('adicionarIngrediente', $event)" @remover-ingrediente="$emit('removerIngrediente', $event)" />
             </li>
         </ul>
     </article>

@@ -3,7 +3,7 @@ import Tag from './Tag.vue';
 
 export default {
     components: { Tag },
-    emits: ['adicionarIngrediente'],
+    emits: ['adicionarIngrediente', 'removerIngrediente'],
     props: {
         ingrediente: { type: String, required: true }
     },
@@ -18,6 +18,8 @@ export default {
 
             if (this.selecionado) {
                 this.$emit('adicionarIngrediente', this.ingrediente);
+            } else {
+                this.$emit('removerIngrediente', this.ingrediente);
             }
         }
     },
