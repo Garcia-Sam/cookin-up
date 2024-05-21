@@ -15,7 +15,7 @@ export default {
       this.ingredientes.push(ingrediente)
     },
     removerIngrediente(ingrediente: string) {
-      this.ingredientes = this.ingredientes.filter(iLista => ingrediente !==iLista)
+      this.ingredientes = this.ingredientes.filter(iLista => ingrediente !== iLista)
     }
   }
 } 
