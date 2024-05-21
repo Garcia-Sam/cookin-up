@@ -14,6 +14,7 @@ export default {
 
 <template>
   <main class='conteudo-principal'>
+    
     <section>
       <span class="subtitulo-lg sua-lista-texto">
         Sua Lista:
@@ -33,7 +34,6 @@ export default {
 
     <SelecionarIngredientes />
   </main>
-
 </template>
 
 <style scoped>
