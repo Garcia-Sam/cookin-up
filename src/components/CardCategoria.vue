@@ -5,7 +5,7 @@ import type { PropType } from 'vue';
 import Tag from './Tag.vue';
 
 export default {
-    components: { Tag, IngredienteSelecionavel},
+    components: { Tag, IngredienteSelecionavel },
     props: {
         categoria: { type: Object as PropType<ICategoria>, required: true }
     },
