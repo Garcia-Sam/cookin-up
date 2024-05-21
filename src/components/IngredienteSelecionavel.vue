@@ -3,6 +3,7 @@ import Tag from './Tag.vue';
 
 export default {
     components: { Tag },
+    emits: ['adicionarIngrediente'],
     props: {
         ingrediente: { type: String, required: true }
     },
@@ -10,12 +11,21 @@ export default {
         return {
             selecionado: false
         }
-    }
+    },
+    methods: {
+        aoClicar() {
+            this.selecionado = !this.selecionado
+
+            if (this.selecionado) {
+                this.$emit('adicionarIngrediente', this.ingrediente);
+            }
+        }
+    },
 }
 </script>
 
 <template>
-    <button class="ingrediente" @click="selecionado = !selecionado" :aria-pressed="selecionado">
+    <button class="ingrediente" @click="aoClicar()" :aria-pressed="selecionado">
         <Tag :texto="ingrediente" :ativa="selecionado" />
     </button>
 </template>
