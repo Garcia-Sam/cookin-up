@@ -8,7 +8,7 @@ export default {
       ingredientes: ['Alho', 'Manteiga', 'Orégano', 'Pão', 'Tomilho', 'Limão']
     }
   },
-  components: { SelecionarIngredientes,  }
+  components: { SelecionarIngredientes, SuaLista }
 } 
 </script>
 
