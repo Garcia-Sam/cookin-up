@@ -10,7 +10,6 @@ export default {
     <button class="paragrafo-lg botao-prinipal">
         {{ texto }}
     </button>
-
 </template>
 
 <style scoped>
