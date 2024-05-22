@@ -6,7 +6,7 @@ import BotaoPrincipal from './BotaoPrincipal.vue';
 
 export default {
   components: { CardCategoria, BotaoPrincipal },
-  emits: ['adicionarIngrediente', 'removerIngrediente'],
+  emits: ['adicionarIngrediente', 'removerIngrediente', 'buscarReceitas'],
   data() {
     return {
       categorias: [] as ICategoria[]
@@ -37,7 +37,7 @@ export default {
       *Atenção: consideramos que você tem em casa sal, pimenta e água.
     </p>
 
-    <BotaoPrincipal texto="Buscar Receitas!"/>
+    <BotaoPrincipal texto="Buscar Receitas!" @click="$emit('buscarReceitas')" />
   </section>
 </template>
 
