@@ -7,7 +7,7 @@ export default {
 </script>
 
 <template>
-    <button class="paragrafo-lg botao-prinipal">
+    <button class="paragrafo-lg botao-principal">
         {{ texto }}
     </button>
 </template>
