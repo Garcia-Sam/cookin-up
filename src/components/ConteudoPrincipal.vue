@@ -37,6 +37,7 @@ export default {
         @remover-ingrediente="removerIngrediente" @buscar-receitas="navegar('MostrarReceitas')" />
 
       <MostrarReceitas v-else-if="conteudo === 'MostrarReceitas'"
+        :ingredientes="ingredientes"
         @editar-receitas="navegar('SelecionarIngredientes')" />
     </KeepAlive>
   </main>
